@@ -10,4 +10,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Call /api/send
-        run: curl -s https://news-digest-two.vercel.app/api/send# GitHub Actions workflow for sending daily news digest 
+        run: |
+          curl -X POST https://news-digest-two.vercel.app/api/send
