@@ -1,1 +1,13 @@
-# GitHub Actions workflow for sending daily news digest 
+name: Daily News Digest
+
+on:
+  schedule:
+    - cron: '0 0 * * *' # 매일 오전 9시(한국시간), UTC 기준 0시
+  workflow_dispatch:     # 수동 실행도 가능 (Actions 탭에서 Run)
+
+jobs:
+  ping-api:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call /api/send
+        run: curl -s https://newspin-digest-two.vercel.app/api/send# GitHub Actions workflow for sending daily news digest 
