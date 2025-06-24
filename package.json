@@ -1,11 +1,12 @@
 {
   "name": "newspin-digest",
   "version": "1.0.0",
+  "type": "commonjs",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "cron": "ts-node scripts/cron.ts"
+    "cron": "ts-node --transpile-only scripts/cron.ts"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.39.5",
@@ -19,6 +20,7 @@
   "devDependencies": {
     "@types/node": "24.0.3",
     "@types/react": "19.1.8",
+    "ts-node": "^10.9.2",
     "typescript": "5.8.3"
   }
 }
